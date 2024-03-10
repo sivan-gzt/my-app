@@ -1,9 +1,6 @@
-import { ReactNode } from 'react';
+import { Address, Image } from "./CommonModels";
+import { OmitID } from "./types";
 
-export interface CommonProps {
-    children?: ReactNode;
-    className?: string;
-}
 export interface IUser {
     _id: string;
     name: Name;
@@ -16,21 +13,7 @@ export interface IUser {
     createdAt: Date;
 }
 
-export interface Address {
-    state: string;
-    country: string;
-    city: string;
-    street: string;
-    houseNumber: number;
-    zip: number;
-    _id: string;
-}
 
-export interface Image {
-    url: string;
-    alt: string;
-    _id: string;
-}
 
 export interface Name {
     first: string;
@@ -38,6 +21,8 @@ export interface Name {
     last: string;
     _id: string;
 }
+
+
 
 export interface SignupResponse {
     name: Name;
@@ -64,7 +49,6 @@ export interface signupData {
     "business account": boolean | string;
 }
 
-type OmitID<T> = Omit<T, "_id">;
 
 export interface signupNormalizedData {
     name: OmitID<Name>;
@@ -81,24 +65,12 @@ export interface loginData {
     password: string;
 }
 
-export type updateUserNormalizedData = {
-    name: OmitID<Name>;
+export interface UserColumns {
+    name: Name;
     phone: string;
-    image: OmitID<Image>;
-    address: OmitID<Address>;
-};
-
-export type updateUserData = {
-    "first name": string;
-    "middle name": string;
-    "last name": string;
-    phone: string;
-    "image url": string;
-    "image alt": string;
-    state: string;
-    country: string;
-    city: string;
-    street: string;
-    "house number": string;
-    zip: string;
-};
+    email: string;
+    address: Address;
+    isAdmin: boolean;
+    isBusiness: boolean;
+    createdAt: string;
+}

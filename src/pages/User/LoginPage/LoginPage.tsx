@@ -16,7 +16,7 @@ import {
 } from "@/components/forms/Form"
 import { Input } from "@/components/ui/Input"
 import { LoginForm } from "@/components/forms/LoginForm"
-import Box from "@/components/ui/Box"
+import Box from "@/components/Box"
 
 
 export default function LoginPage() {

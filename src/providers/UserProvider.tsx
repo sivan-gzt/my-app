@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import jwtDecode, { JwtPayload } from 'jwt-decode';
-import { getToken, getUser, removeToken } from "../services/localStorageService";
+import { getToken, getUser, removeToken } from "../services/usersLocalStorageService";
 import { ProviderProps } from "react";
 
 interface UserContextType {

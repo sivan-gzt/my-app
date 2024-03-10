@@ -1,4 +1,4 @@
-import { CommonProps } from "@/types/types";
+import { CommonProps } from "@/models/types";
 test('renders learn react link', () => {
   render(<App />);
   const linkElement = screen.getByText(/learn react/i);

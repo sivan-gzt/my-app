@@ -1,11 +1,11 @@
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../providers/UserProvider";
-import useAxios from "../../hooks/useAxios";
+import useAxios from "./useAxios";
 import { login, signup } from "../services/usersApiService";
-import { getUser, removeToken, setTokenInLocalStorage } from "../services/localStorageService";
-import ROUTES from "../../routes/routesModel";
-import normalizeUser from "../helpers/normalization/normalizeUser";
+import { getUser, removeToken, setTokenInLocalStorage } from "../services/usersLocalStorageService";
+import ROUTES from "../routes/routesModel";
+import normalizeUser from "../lib/normalizeUser";
 import { JwtPayload } from 'jwt-decode'; // Import JwtPayload type
 
 
@@ -24,7 +24,7 @@ const useUsers = (): {
     handleSignup: (user: { email: string; password: string; }) => void;
     handleLogout: () => void;
 } => {
-    debugger;
+
     const [state, setState] = useState<UserState>({
         users: null,
         loading: false,
@@ -51,7 +51,7 @@ const useUsers = (): {
             setTokenInLocalStorage(token);
             setToken(token);
             const userFromLocalStorage = getUser() as JwtPayload;
-            console.log(userFromLocalStorage);
+
 
             requestStatus(false, null, null, userFromLocalStorage);
             navigate(ROUTES.CARDS);

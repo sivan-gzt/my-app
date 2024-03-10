@@ -5,7 +5,7 @@ import Router from "./routes/Router";
 import Layout from "./layout/Layout";
 
 import { Toaster } from "./components/ui/Toaster";
-import { UserProvider } from "./users/providers/UserProvider";
+import { UserProvider } from "./providers/UserProvider";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 

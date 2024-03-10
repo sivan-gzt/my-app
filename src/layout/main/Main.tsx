@@ -1,9 +1,9 @@
-import Box from "@/components/ui/Box";
-import { CommonProps } from "@/types/types";
+import Box from "@/components/Box";
+import { CommonProps } from "@/models/types";
 
 const Main: React.FC<CommonProps> = ({ children }) => {
     return (
-        <Box className="flex flex-col content-center justify-center align-center min-w-full">
+        <Box className="flex flex-col w-dvw min-w-min">
             {children}
         </Box>
     );

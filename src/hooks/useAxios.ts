@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from "sonner"
 
-import { useUser } from "../users/providers/UserProvider";
+import { useUser } from "../providers/UserProvider";
 import {
     useEffect
 } from 'react';

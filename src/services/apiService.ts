@@ -1,13 +1,13 @@
 import axios from "axios";
-import { ICard } from "../cards/models/CardModel";
+import { IBusiness } from "../models/BusinessModel";
 import {
     IUser,
     SignupResponse,
     updateUserNormalizedData,
-} from "../types/types";
+} from "../models/types";
 import { AxiosResponse } from "axios";
 import { formDataType } from "../components/forms/models/formDataTypes";
-import { createCardNormalizedData } from "../cards/models/CreateCardModels";
+import { createCardNormalizedData } from "../models/CreateCardModels";
 
 const ApiURL: string = "https://monkfish-app-z9uza.ondigitalocean.app/bcard2";
 
@@ -25,9 +25,9 @@ export const getFromAPI = async (
     if (token) instance.defaults.headers.common["x-auth-token"] = token;
     const ID = id || "";
     try {
-        const response: AxiosResponse<ICard | IUser | ICard[] | IUser[]> =
+        const response: AxiosResponse<IBusiness[] | IUser[]> =
             await instance.get(`${ApiURL}/${api}/${ID}`);
-        return response.data;
+        return [...response.data];
     } catch (error) {
         if (error instanceof Error) {
             return Promise.reject(error.message);
@@ -35,7 +35,7 @@ export const getFromAPI = async (
         return Promise.reject(`Unidentified Error: ${error}`);
     }
 };
-type responseType = string | SignupResponse | ICard;
+type responseType = string | SignupResponse | IBusiness;
 export const postToAPI = async (
     api: "users/login" | "users" | "cards",
     data: formDataType,

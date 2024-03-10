@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import loginSchema from "@/components/forms/models/loginSchema"
+import signupSchema from "@/components/forms/models/signupSchema"
 import { z } from "zod"
 
 import { Button } from "@/components/ui/Button"
@@ -19,10 +19,10 @@ import { Input } from "@/components/ui/Input"
 import useUsers from "@/hooks/useUsers"
 
 
-export function LoginForm() {
+export function SignupForm() {
     // 1. Define your form.
-    const form = useForm<z.infer<typeof loginSchema>>({
-        resolver: zodResolver(loginSchema),
+    const form = useForm<z.infer<typeof signupSchema>>({
+        resolver: zodResolver(signupSchema),
         defaultValues: {
             email: "",
             password: "",
@@ -30,7 +30,7 @@ export function LoginForm() {
     })
 
     // 2. Define a submit handler.
-    async function onSubmit(userCredentials: z.infer<typeof loginSchema>) {
+    async function onSubmit(userCredentials: z.infer<typeof signupSchema>) {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
 

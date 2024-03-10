@@ -1,5 +1,5 @@
-import NavBarLink from "@/components/NavBarLink";
-import Box from "@/components/ui/Box";
+import NavBarLink from "@/components/ui/NavBarLink";
+import Box from "@/components/Box";
 import { NavigationMenu } from "@/components/ui/NavigationMenu";
 import ROUTES from "@/routes/routesModel";
 

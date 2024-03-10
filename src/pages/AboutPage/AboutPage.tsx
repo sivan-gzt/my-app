@@ -1,8 +1,8 @@
-import Box from "@/components/ui/Box";
+import Box from "@/components/Box";
 import React from "react";
-import TypographyH1 from "../../components/ui/Typography/TypographyH1";
-import TypographyH2 from "@/components/ui/Typography/TypographyH2";
-import TypographyP from "@/components/ui/Typography/TypographyP";
+import TypographyH1 from "../../components/ui/TypographyH1";
+import TypographyH2 from "@/components/ui/TypographyH2";
+import TypographyP from "@/components/ui/TypographyP";
 
 const AboutPage: React.FC = () => {
     return (

@@ -1,7 +1,7 @@
-import { loginData, signupData, signupNormalizedData } from '@/types/types';
+import { loginData, signupData, signupNormalizedData } from "@/models/UserModel";
 import axios from 'axios';
 import { JwtPayload } from 'jwt-decode';
-import { getUser } from './localStorageService';
+import { getUser } from './usersLocalStorageService';
 
 const apiUrl = import.meta.env.VITE_APP_API_URL || 'https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users';
 

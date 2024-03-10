@@ -1,4 +1,4 @@
-import { CommonProps } from "@/types/types";
+import { CommonProps } from "@/models/types";
 import React from "react";
 
 const TypographyH4: React.FC<CommonProps> = ({ children }) => {

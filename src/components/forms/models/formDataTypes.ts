@@ -1,8 +1,8 @@
 import {
     createCardData,
     createCardNormalizedData,
-} from "../../../cards/models/CreateCardModels";
-import { loginData, signupData } from "../../../types/types";
+} from "../../../models/CreateCardModels";
+import { loginData, signupData } from "../../../models/types";
 
 export type formDataType =
     | signupData

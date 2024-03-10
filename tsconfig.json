@@ -34,7 +34,7 @@
   },
   "include": [
     "./src/**/*.ts?",
-    "src/users/hooks/useUsers.ts"
+    "src/hooks/useUsers.ts"
   ],
   "exclude": [
     "node_modules",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link as ReactRouterLink, LinkProps as ReactRouterLinkProps } from "react-router-dom";
-import { NavigationMenuTrigger, NavigationMenuItem } from "./ui/NavigationMenu";
+import { NavigationMenuTrigger, NavigationMenuItem } from "./NavigationMenu";
 
 interface NavBarLinkProps extends ReactRouterLinkProps {
     label: string;

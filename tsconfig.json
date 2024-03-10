@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": "./src",
+    "target": "ESNext",
+    "types": [
+      "vite/client"
+    ],
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,9 +22,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@Typography": [
+        "./src/components/ui/Typography/*"
+      ]
+    }
   },
   "include": [
-    "src"
-  ]
+    "./src/**/*.ts?",
+    "src/users/hooks/useUsers.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ],
 }
